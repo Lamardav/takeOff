@@ -5,7 +5,6 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "next/core-web-vitals",
     "prettier",
   ],
   rules: {
@@ -25,7 +24,6 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-unnecessary-type-constraint": "off",
     "@next/next/no-document-import-in-page": "off",
-    "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "off",
     "prettier/prettier": [
       "warn",

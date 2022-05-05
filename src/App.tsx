@@ -1,13 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-     1
-    </div>
-  );
-}
-
-export default App;
+export const App = () => {
+  return <div className="App">12</div>;
+};
