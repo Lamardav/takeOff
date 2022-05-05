@@ -1,6 +1,14 @@
-import React from "react";
-import "./App.css";
+import React, { FC, Suspense } from "react";
+import { MainRoutes } from "./core/routes/mainRoutes";
+import { BrowserRouter } from "react-router-dom";
+import { EmptyScreen } from "./components/emptyScreens/emptyScreen";
 
-export const App = () => {
-  return <div className="App">12</div>;
+export const App: FC = () => {
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<EmptyScreen />}>
+        <MainRoutes />
+      </Suspense>
+    </BrowserRouter>
+  );
 };
