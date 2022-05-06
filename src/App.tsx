@@ -1,9 +1,9 @@
 import React, { FC, Suspense } from "react";
-import { MainRoutes } from "./core/routes/mainRoutes";
+import { store } from "./core/redux/store/store";
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { LoadingScreen } from "./components/emptyScreens/emptyScreen";
-import { Provider } from "react-redux";
-import { store } from "./core/redux/store/store";
+import { MainRoutes } from "./core/routes/mainRoutes";
 
 export const App: FC = () => {
   return (

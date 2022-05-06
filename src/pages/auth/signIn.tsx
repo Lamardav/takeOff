@@ -26,12 +26,29 @@ const SignIn = () => {
   useEffect(() => {
     dispatch(reset());
   }, [dispatch]);
-
+  const [post, setPost] = useState({ isLoading: true, users: [], error: null });
   const ClickHandler = () => {
     setNumber(number + 1);
     dispatch(renew());
     dispatch(reset());
   };
+  const fetchS = () => {
+    fetch("http://localhost:3001/posts")
+      .then((res) => res.json())
+      .then((result) => {
+        console.log("result", result);
+        return setPost({
+          isLoading: false,
+          users: result,
+          error: null,
+        });
+      })
+      .catch(console.log);
+  };
+  useEffect(() => {
+    fetchS();
+  }, []);
+  console.log("posts", post);
   return (
     <Content>
       page SignIn
@@ -39,6 +56,17 @@ const SignIn = () => {
       <SecondComponent mass={memoizedMass} />
       <button onClick={ClickHandler}>click</button>
       {number}
+      {post.users.map((user) => {
+        const { adderss, name, email } = user;
+        return (
+          <div key={name}>
+            <p>Name: {name}</p>
+            <p>Email: {email}</p>
+            <p>Address: {adderss}</p>
+            <hr />
+          </div>
+        );
+      })}
     </Content>
   );
 };
