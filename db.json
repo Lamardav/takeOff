@@ -1,6 +1,13 @@
 {
   "users": [
     {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$t.EsAIzqwRqYgnE98Ay/w.OFI/4DjU/sukx/5kmxIkQeT2fYzJ7xO",
+      "id": 1
+    }
+  ],
+  "contacts": [
+    {
       "id": 1,
       "name": "Leanne Graham",
       "username": "Bret",

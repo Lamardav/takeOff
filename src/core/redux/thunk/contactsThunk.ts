@@ -4,7 +4,7 @@ import { baseFetch } from "../../../api/baseFetch";
 export const getContacts = createAsyncThunk("getpos/fetchGetTeamById", async function FetchGET(_, { rejectWithValue }) {
   try {
     return await baseFetch({
-      url: "users",
+      url: "contacts",
       method: "GET",
     });
   } catch (err: any) {
