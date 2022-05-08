@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useAppDispatch, useAppSelector } from "../../core/redux/store/store";
 import { contactsSelectors } from "../../core/redux/selectors/contactsSelector";
 import { contactsDispatches } from "../../core/redux/thunk/contactsThunk";
+import { theme } from "../../assets/theme/theme";
 
 const SignIn = () => {
   const dispatch = useAppDispatch();
@@ -13,11 +14,11 @@ const SignIn = () => {
     dispatch(contactsDispatches.getContacts());
   }, [dispatch]);
 
-  return <Content></Content>;
+  return <Content>1</Content>;
 };
 
 export default SignIn;
 
 const Content = styled.div`
-  color: black;
+  color: ${theme.colors.grayDark};
 `;

@@ -1,18 +1,26 @@
-import React from "react";
+import React, { FC } from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
+import { theme } from "../../assets/theme/theme";
+import { Header } from "../header/header";
+import { Footer } from "../footer/footer";
 
-export const Layout = () => {
+export const Layout: FC = () => {
   return (
-    <Main>
-      <Outlet />
-    </Main>
+    <>
+      <Header />
+      <Main>
+        <Outlet />
+      </Main>
+      <Footer />
+    </>
   );
 };
 
 const Main = styled.main`
-  color: black;
-  background: yellow;
-  min-height: 100vh;
-  min-width: 100vw;
+  color: ${theme.colors.white};
+  background: ${theme.colors.black};
+  min-height: calc(100vh - 8vw);
+  display: flex;
+  flex-direction: column;
 `;
