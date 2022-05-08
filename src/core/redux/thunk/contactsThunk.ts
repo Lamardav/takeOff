@@ -1,17 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { baseFetch } from "../../../api/baseFetch";
+import { getContactsFetch } from "../../../api/fetches/contacts/contactsFetches";
 
-export const getContacts = createAsyncThunk("getpos/fetchGetTeamById", async function FetchGET(_, { rejectWithValue }) {
-  try {
-    return await baseFetch({
-      url: "contacts",
-      method: "GET",
-    });
-  } catch (err: any) {
-    if (err.message) {
-      return rejectWithValue(err.message);
-    } else {
-      return rejectWithValue(err);
-    }
-  }
-});
+export const contactsDispatches = {
+  getContacts: createAsyncThunk("getContacts", getContactsFetch),
+};

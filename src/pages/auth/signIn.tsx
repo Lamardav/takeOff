@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useAppDispatch, useAppSelector } from "../../core/redux/store/store";
 import { contactsSelectors } from "../../core/redux/selectors/contactsSelector";
-import { getContacts } from "../../core/redux/thunk/contactsThunk";
+import { contactsDispatches } from "../../core/redux/thunk/contactsThunk";
 
 const SignIn = () => {
   const dispatch = useAppDispatch();
@@ -10,7 +10,7 @@ const SignIn = () => {
 
   console.log("contacts=>", contacts);
   useEffect(() => {
-    dispatch(getContacts());
+    dispatch(contactsDispatches.getContacts());
   }, [dispatch]);
 
   return <Content></Content>;

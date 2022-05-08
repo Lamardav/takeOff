@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="добавил селекторы">
-      <change afterPath="$PROJECT_DIR$/json-server.json" afterDir="false" />
+    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="добавил сервер авторизации">
+      <change afterPath="$PROJECT_DIR$/src/api/fetches/contacts/contactsFetches.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/baseFetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/baseFetch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/redux/slice/contactsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/slice/contactsSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/redux/thunk/contactsThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/thunk/contactsThunk.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/auth/signIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/signIn.tsx" afterDir="false" />
     </list>
@@ -106,7 +105,8 @@
       <workItem from="1651776823714" duration="4000" />
       <workItem from="1651852799005" duration="15978000" />
       <workItem from="1651873317139" duration="998000" />
-      <workItem from="1651931023721" duration="17137000" />
+      <workItem from="1651931023721" duration="21378000" />
+      <workItem from="1651999780824" duration="5593000" />
     </task>
     <task id="LOCAL-00002" summary="настройка prettie и очистка от ненужных файлов">
       <created>1651749262003</created>
@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651949853482</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="добавил сервер авторизации">
+      <created>1651953177474</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1651953177474</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +182,8 @@
     <MESSAGE value="добавил redux" />
     <MESSAGE value="добавил фетч" />
     <MESSAGE value="добавил селекторы" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил селекторы" />
+    <MESSAGE value="добавил сервер авторизации" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил сервер авторизации" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
