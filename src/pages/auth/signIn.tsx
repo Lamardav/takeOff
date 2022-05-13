@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../core/redux/store/store";
 import { contactsSelectors } from "../../core/redux/selectors/contactsSelector";
 import { contactsDispatches } from "../../core/redux/thunk/contactsThunk";
 import { theme } from "../../assets/theme/theme";
+import { SignInForm } from "../../componentsPage/pageSignIn/signInForm";
 
 const SignIn = () => {
   const dispatch = useAppDispatch();
@@ -14,7 +15,11 @@ const SignIn = () => {
     dispatch(contactsDispatches.getContacts());
   }, [dispatch]);
 
-  return <Content>1</Content>;
+  return (
+    <Content>
+      <SignInForm />
+    </Content>
+  );
 };
 
 export default SignIn;
