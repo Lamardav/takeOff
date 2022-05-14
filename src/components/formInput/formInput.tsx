@@ -36,7 +36,7 @@ const Content = styled.div`
     margin-bottom: 3.9vw;
   }
   @media screen and (max-width: ${theme.rubberSize.tablet}) {
-    margin-bottom: 5.2vw;
+    margin-bottom: 7.2vw;
   }
 `;
 

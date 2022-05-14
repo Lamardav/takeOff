@@ -2,31 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="страница входа">
-      <change afterPath="$PROJECT_DIR$/public/mockImage/header/futur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mockImage/signIn/bender1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/dto/INavBar.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/iconEyeClosed.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/iconEyeOpen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/button/customButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/checkbox/checkbox.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navMenu/navMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/componentsPage/pageSignIn/speakingBender.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/componentsPage/pageSignUp/signUpForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/auth/signUp.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mockImage/signUp/zubby.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/dto/IFormInput.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/dto/IFormInput.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/theme/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/theme/theme.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/formInput/formInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formInput/formInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignIn/signInForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignIn/signInForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/routes/links.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/routes/links.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/routes/path/authRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/routes/path/authRoutes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/validation/yup/yup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/validation/yup/yup.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/auth/signIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/signIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignUp/signUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignUp/signUpForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/auth/signUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/signUp.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/dimashpakov/Documents/Projects/takeoff/public/mockImage/header",
+    "last_opened_file_path": "/Users/dimashpakov/Documents/Projects/takeoff/public/mockImage/signUp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,6 +54,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/mockImage/signUp" />
       <recent name="$PROJECT_DIR$/public/mockImage/header" />
       <recent name="$PROJECT_DIR$/public/mockImage/signIn" />
       <recent name="$PROJECT_DIR$/src/assets/icons" />
@@ -135,7 +119,7 @@
       <workItem from="1652275480047" duration="4704000" />
       <workItem from="1652356918430" duration="508000" />
       <workItem from="1652448839803" duration="14205000" />
-      <workItem from="1652522875159" duration="16269000" />
+      <workItem from="1652522875159" duration="17859000" />
     </task>
     <task id="LOCAL-00002" summary="настройка prettie и очистка от ненужных файлов">
       <created>1651749262003</created>
@@ -207,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652473145116</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="страница входа">
+      <created>1652541426975</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652541426975</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

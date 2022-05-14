@@ -13,11 +13,14 @@ const Content = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1vw;
   @media screen and (max-width: ${theme.rubberSize.desktop}) {
     min-height: auto;
     padding: 4vw 0;
+    font-size: 2vw;
   }
   @media screen and (max-width: ${theme.rubberSize.tablet}) {
     padding: 7vw 0;
+    font-size: 4vw;
   }
 `;

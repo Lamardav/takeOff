@@ -9,6 +9,7 @@ import styled from "styled-components";
 import { CustomButton } from "../../components/button/customButton";
 import { theme } from "../../assets/theme/theme";
 import { Link } from "react-router-dom";
+import { authRoutes } from "../../core/routes/path/authRoutes";
 
 export const SignInForm = () => {
   const [checked, setChecked] = useState<boolean>(false);
@@ -37,7 +38,7 @@ export const SignInForm = () => {
       />
       <Button typeButton={"red"} type={"submit"} value={"Войти"} />
       <Register>
-        Еще не зарегистрировались? &nbsp;<CustomLink to={"/signup"}>Регистрация</CustomLink>&nbsp;
+        Еще не зарегистрировались? &nbsp;<CustomLink to={authRoutes.signup.link}>Регистрация</CustomLink>&nbsp;
       </Register>
     </Form>
   );
