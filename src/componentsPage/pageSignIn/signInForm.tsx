@@ -14,6 +14,7 @@ import { useAppDispatch } from "../../core/redux/store/store";
 import { useNavigate } from "react-router";
 import { authDispatches } from "../../core/redux/thunk/authThunk";
 import { contactsRoutes } from "../../core/routes/path/listRoutes";
+import { addToLocalStorage } from "../../helpers/hook/adduserToLocalStorage";
 
 export const SignInForm = () => {
   const [checked, setChecked] = useState<boolean>(false);
@@ -27,16 +28,18 @@ export const SignInForm = () => {
     mode: "onSubmit",
     resolver: yupResolver(schemaSignIn),
   });
+
   const onSubmit = useCallback(
     (data: IFormSignIn) => {
       dispatch(authDispatches.logIn(data)).then((res) => {
         if (res.payload) {
+          addToLocalStorage<IFormSignIn>(data);
           history(contactsRoutes.contacts.link);
         } else {
         }
       });
     },
-    [dispatch, history]
+    [dispatch, history, checked]
   );
 
   return (

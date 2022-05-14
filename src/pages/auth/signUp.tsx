@@ -4,13 +4,6 @@ import { theme } from "../../assets/theme/theme";
 import { SignUpForm } from "../../componentsPage/pageSignUp/signUpForm";
 
 const SignUp = () => {
-  // const dispatch = useAppDispatch();
-  // const contacts = useAppSelector(contactsSelectors.contacts);
-  //
-  // useEffect(() => {
-  //   dispatch(contactsDispatches.getContacts());
-  // }, [dispatch]);
-
   return (
     <Content>
       <div>

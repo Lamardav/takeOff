@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { FormInput } from "../../components/formInput/formInput";
 import { IFormSignUp } from "../../api/dto/IFormInput";
 import { Checkbox } from "../../components/checkbox/checkbox";
@@ -10,9 +10,18 @@ import styled from "styled-components";
 import { theme } from "../../assets/theme/theme";
 import { Link } from "react-router-dom";
 import { authRoutes } from "../../core/routes/path/authRoutes";
+import { authDispatches } from "../../core/redux/thunk/authThunk";
+import { addToLocalStorage } from "../../helpers/hook/adduserToLocalStorage";
+import { contactsRoutes } from "../../core/routes/path/listRoutes";
+import { useNavigate } from "react-router";
+import { useAppDispatch } from "../../core/redux/store/store";
+import { ErrToast, UIToastContainer } from "../../components/toast/toast";
 
 export const SignUpForm = () => {
   const [checked, setChecked] = useState<boolean>(false);
+  const history = useNavigate();
+  const dispatch = useAppDispatch();
+
   const {
     handleSubmit,
     control,
@@ -21,7 +30,20 @@ export const SignUpForm = () => {
     mode: "onSubmit",
     resolver: yupResolver(schemaSignUp),
   });
-  const onSubmit = (data: IFormSignUp) => console.log(data);
+
+  const onSubmit = useCallback(
+    (data: IFormSignUp) => {
+      dispatch(authDispatches.signUp(data))
+        .then((res) => {
+          if (res.payload) {
+            addToLocalStorage<IFormSignUp>(data);
+            history(contactsRoutes.contacts.link);
+          }
+        })
+        .catch(() => ErrToast("Данный Email уже занят"));
+    },
+    [dispatch, history, checked]
+  );
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
@@ -47,6 +69,7 @@ export const SignUpForm = () => {
       <Register>
         Уже зарегистрированы? &nbsp;<CustomLink to={authRoutes.signin.link}>Войти</CustomLink>&nbsp;
       </Register>
+      <UIToastContainer />
     </Form>
   );
 };
@@ -63,16 +86,6 @@ const Form = styled.form`
   }
   @media screen and (max-width: ${theme.rubberSize.tablet}) {
     width: 90vw;
-  }
-`;
-
-const Button = styled(CustomButton)`
-  margin-top: 1.1vw;
-  @media screen and (max-width: ${theme.rubberSize.desktop}) {
-    margin-top: 2.5vw;
-  }
-  @media screen and (max-width: ${theme.rubberSize.tablet}) {
-    margin-top: 2.9vw;
   }
 `;
 

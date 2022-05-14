@@ -56,6 +56,7 @@ const Img = styled.img`
 const SpeachSky = styled.div<{ visible: boolean }>`
   position: absolute;
   border-radius: 4px;
+  cursor: default;
   padding: 0.46vw 0.63vw;
   color: ${theme.colors.black};
   background: ${theme.colors.white};

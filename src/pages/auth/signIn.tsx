@@ -5,14 +5,6 @@ import { SignInForm } from "../../componentsPage/pageSignIn/signInForm";
 import { SpeakingBender } from "../../componentsPage/pageSignIn/speakingBender";
 
 const SignIn = () => {
-  // const dispatch = useAppDispatch();
-  // const contacts = useAppSelector(contactsSelectors.contacts);
-  //
-  // console.log("contacts=>", contacts);
-  // useEffect(() => {
-  //   dispatch(contactsDispatches.getContacts());
-  // }, [dispatch]);
-
   return (
     <Content>
       <div>

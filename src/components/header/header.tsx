@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 import { theme } from "../../assets/theme/theme";
 import { useNavigate } from "react-router";
 import { NavMenu } from "../navMenu/navMenu";
 import { protectedHeaderNav, publicHeaderNav } from "../../core/routes/links";
+import { useAppDispatch, useAppSelector } from "../../core/redux/store/store";
+import { authSelectors } from "../../core/redux/selectors/authSelector";
+import { setAuthFalse } from "../../core/redux/slice/authSlice";
 
 export const Header = () => {
   const history = useNavigate();
-  const isAuth = false;
+  const dispatch = useAppDispatch();
+  const isAuth = useAppSelector(authSelectors.isAuth);
+
+  const ExitFunc = useCallback(() => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("user");
+    dispatch(setAuthFalse());
+  }, [dispatch]);
 
   return (
     <Content>
@@ -15,7 +25,10 @@ export const Header = () => {
         <Img alt={"Futurama"} src={"/mockImage/header/futur.png"} />
         <P>Главная</P>
       </Logo>
-      <NavMenu navList={isAuth ? protectedHeaderNav : publicHeaderNav} />
+      <RightArea>
+        <NavMenu navList={isAuth ? protectedHeaderNav : publicHeaderNav} />
+        {isAuth && <Exit onClick={ExitFunc} src={"/mockImage/header/escape.svg"} alt={"exit"} />}
+      </RightArea>
     </Content>
   );
 };
@@ -64,4 +77,14 @@ const P = styled.p`
     font-size: 3.2vw;
     text-transform: uppercase;
   }
+`;
+
+const Exit = styled.img`
+  cursor: pointer;
+`;
+
+const RightArea = styled.div`
+  display: flex;
+  align-self: center;
+  grid-column-gap: 4vw;
 `;

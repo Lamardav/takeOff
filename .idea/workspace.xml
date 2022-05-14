@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="страница регистрации">
-      <change afterPath="$PROJECT_DIR$/src/api/fetches/auth/signInFetches.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/redux/thunk/authThunk.ts" afterDir="false" />
+    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="fetch Sign in">
+      <change afterPath="$PROJECT_DIR$/public/mockImage/header/escape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/fetches/auth/signUpFetches.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/toast/toast.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/hook/adduserToLocalStorage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/dto/IAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/dto/IAuth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignIn/signInForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignIn/signInForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignIn/speakingBender.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignIn/speakingBender.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignUp/signUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignUp/signUpForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/redux/selectors/authSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/selectors/authSelector.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/redux/selectors/contactsSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/selectors/contactsSelector.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/redux/slice/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/slice/authSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/redux/thunk/authThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/thunk/authThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/routes/appRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/routes/appRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/routes/mainRoutes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/routes/mainRoutes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/auth/initialValue/initialValueAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/auth/initialValue/initialValueAuth.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/auth/signIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/signIn.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/auth/signUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/signUp.tsx" afterDir="false" />
@@ -45,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/dimashpakov/Documents/Projects/takeoff/public/mockImage/signUp",
+    "last_opened_file_path": "/Users/dimashpakov/Documents/Projects/takeoff/public/mockImage/header",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,8 +68,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/mockImage/signUp" />
       <recent name="$PROJECT_DIR$/public/mockImage/header" />
+      <recent name="$PROJECT_DIR$/public/mockImage/signUp" />
       <recent name="$PROJECT_DIR$/public/mockImage/signIn" />
       <recent name="$PROJECT_DIR$/src/assets/icons" />
     </key>
@@ -124,7 +133,7 @@
       <workItem from="1652275480047" duration="4704000" />
       <workItem from="1652356918430" duration="508000" />
       <workItem from="1652448839803" duration="14205000" />
-      <workItem from="1652522875159" duration="20347000" />
+      <workItem from="1652522875159" duration="32124000" />
     </task>
     <task id="LOCAL-00002" summary="настройка prettie и очистка от ненужных файлов">
       <created>1651749262003</created>
@@ -210,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652543080041</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fetch Sign in">
+      <created>1652545532902</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652545532902</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +257,8 @@
     <MESSAGE value="добавил rhf" />
     <MESSAGE value="страница входа" />
     <MESSAGE value="страница регистрации" />
-    <option name="LAST_COMMIT_MESSAGE" value="страница регистрации" />
+    <MESSAGE value="fetch Sign in" />
+    <option name="LAST_COMMIT_MESSAGE" value="fetch Sign in" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

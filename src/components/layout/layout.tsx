@@ -1,15 +1,18 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../assets/theme/theme";
 import { Header } from "../header/header";
 import { Footer } from "../footer/footer";
+import { useAppDispatch } from "../../core/redux/store/store";
+import { setAuthFalse, setAuthTrue } from "../../core/redux/slice/authSlice";
 
 export const Layout: FC = () => {
-  const [isAuthenticated, setAuthenticated] = useState(() => {
-    const token = localStorage.getItem("accessToken");
-    return token !== null;
-  });
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch((localStorage.getItem("accessToken") !== null ? setAuthTrue : setAuthFalse)());
+  }, []);
 
   return (
     <>

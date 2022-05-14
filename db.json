@@ -14,6 +14,13 @@
       "email": "diman95350@gmail.com",
       "password": "$2a$10$VPvAUB4.cCVeLfb1qXS4XODJx0VXuoK4h/LOchS3ZQK1AlLiZOG1K",
       "id": 3
+    },
+    {
+      "email": "diman95350@gmails.com",
+      "password": "$2a$10$N8ZbI7LsS.jGdQIHS1kvxeLXbaTLd5/jqhthJE6Z1oiNZpljF3RLm",
+      "firstName": "Lamardav",
+      "passwordConfirmation": "dimm1201",
+      "id": 4
     }
   ],
   "contacts": [
