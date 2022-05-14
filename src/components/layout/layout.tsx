@@ -23,4 +23,5 @@ const Main = styled.main`
   min-height: calc(100vh - 8vw);
   display: flex;
   flex-direction: column;
+  height: 100%;
 `;
