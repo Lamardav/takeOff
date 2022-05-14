@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 import { IFormSignIn } from "../../api/dto/IFormInput";
 import { FormInput } from "../../components/formInput/formInput";
@@ -10,9 +10,15 @@ import { CustomButton } from "../../components/button/customButton";
 import { theme } from "../../assets/theme/theme";
 import { Link } from "react-router-dom";
 import { authRoutes } from "../../core/routes/path/authRoutes";
+import { useAppDispatch } from "../../core/redux/store/store";
+import { useNavigate } from "react-router";
+import { authDispatches } from "../../core/redux/thunk/authThunk";
+import { contactsRoutes } from "../../core/routes/path/listRoutes";
 
 export const SignInForm = () => {
   const [checked, setChecked] = useState<boolean>(false);
+  const history = useNavigate();
+  const dispatch = useAppDispatch();
   const {
     handleSubmit,
     control,
@@ -21,7 +27,17 @@ export const SignInForm = () => {
     mode: "onSubmit",
     resolver: yupResolver(schemaSignIn),
   });
-  const onSubmit = (data: IFormSignIn) => console.log(data);
+  const onSubmit = useCallback(
+    (data: IFormSignIn) => {
+      dispatch(authDispatches.logIn(data)).then((res) => {
+        if (res.payload) {
+          history(contactsRoutes.contacts.link);
+        } else {
+        }
+      });
+    },
+    [dispatch, history]
+  );
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)} autoComplete={"off"}>

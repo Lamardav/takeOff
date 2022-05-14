@@ -4,6 +4,16 @@
       "email": "olivier@mail.com",
       "password": "$2a$10$t.EsAIzqwRqYgnE98Ay/w.OFI/4DjU/sukx/5kmxIkQeT2fYzJ7xO",
       "id": 1
+    },
+    {
+      "email": "olivier@mails.com",
+      "password": "$2a$10$RS9fGI51hEEL4oegvkOd7uzwHpFj987HOr5KFGITiWv4R4mIm9PZS",
+      "id": 2
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "$2a$10$VPvAUB4.cCVeLfb1qXS4XODJx0VXuoK4h/LOchS3ZQK1AlLiZOG1K",
+      "id": 3
     }
   ],
   "contacts": [
@@ -236,6 +246,76 @@
         "catchPhrase": "Centralized empowering task-force",
         "bs": "target end-to-end models"
       }
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 11
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 12
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 13
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 14
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 15
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 16
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 17
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 18
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 19
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 20
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 21
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 22
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 23
+    },
+    {
+      "email": "diman95350@gmail.com",
+      "password": "dimm1201",
+      "id": 24
     }
   ],
   "profile": {

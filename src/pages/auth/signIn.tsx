@@ -1,20 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { useAppDispatch, useAppSelector } from "../../core/redux/store/store";
-import { contactsSelectors } from "../../core/redux/selectors/contactsSelector";
-import { contactsDispatches } from "../../core/redux/thunk/contactsThunk";
 import { theme } from "../../assets/theme/theme";
 import { SignInForm } from "../../componentsPage/pageSignIn/signInForm";
 import { SpeakingBender } from "../../componentsPage/pageSignIn/speakingBender";
 
 const SignIn = () => {
-  const dispatch = useAppDispatch();
-  const contacts = useAppSelector(contactsSelectors.contacts);
-
-  console.log("contacts=>", contacts);
-  useEffect(() => {
-    dispatch(contactsDispatches.getContacts());
-  }, [dispatch]);
+  // const dispatch = useAppDispatch();
+  // const contacts = useAppSelector(contactsSelectors.contacts);
+  //
+  // console.log("contacts=>", contacts);
+  // useEffect(() => {
+  //   dispatch(contactsDispatches.getContacts());
+  // }, [dispatch]);
 
   return (
     <Content>

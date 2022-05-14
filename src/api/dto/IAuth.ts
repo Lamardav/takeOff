@@ -1,3 +1,4 @@
 export interface IAuth {
-  isAuth: boolean;
+  loading: boolean;
+  accessToken: string | null;
 }
