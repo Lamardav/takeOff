@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="готовая авторизация">
-      <change afterPath="$PROJECT_DIR$/src/api/dto/IPagination.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userCard/userCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/usePaginationHandler/usePaginationHandler.tsx" afterDir="false" />
+    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="добавил удаление и изменение">
+      <change afterPath="$PROJECT_DIR$/public/mockImage/contacts/delete.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mockImage/contacts/no.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mockImage/contacts/paginationLoadMore.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mockImage/contacts/update.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mockImage/contacts/yes.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/dto/ISlices/IAuthSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pagination/pagination.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/baseFetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/baseFetch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/dto/ISlices/IContactsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/dto/ISlices/IContactsSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/fetches/contacts/contactsFetches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/fetches/contacts/contactsFetches.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignIn/signInForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignIn/signInForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contacts/contacts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contacts/contacts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userCard/userCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCard/userCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/redux/selectors/contactsSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/selectors/contactsSelector.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/redux/slice/contactsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/slice/contactsSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/redux/thunk/contactsThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/thunk/contactsThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/contacts/initialValue/initialvalueContacts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/contacts/initialValue/initialvalueContacts.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,31 +45,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dimashpakov/Documents/Projects/takeoff/public/mockImage/header&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/dimashpakov/Documents/Projects/takeoff/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/dimashpakov/Documents/Projects/takeoff/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/dimashpakov/Documents/Projects/takeoff/public/mockImage/contacts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/dimashpakov/Documents/Projects/takeoff/node_modules/prettier",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "/Users/dimashpakov/Documents/Projects/takeoff/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/mockImage/contacts" />
+      <recent name="$PROJECT_DIR$/src/assets/icons" />
       <recent name="$PROJECT_DIR$/public/mockImage/header" />
       <recent name="$PROJECT_DIR$/public/mockImage/signUp" />
       <recent name="$PROJECT_DIR$/public/mockImage/signIn" />
-      <recent name="$PROJECT_DIR$/src/assets/icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/mockImage/contacts" />
       <recent name="$PROJECT_DIR$/src/components/input" />
       <recent name="$PROJECT_DIR$/src/core/redux" />
       <recent name="$PROJECT_DIR$/src/core/redux/slice" />
@@ -124,7 +134,7 @@
       <workItem from="1652522875159" duration="32171000" />
       <workItem from="1652562285881" duration="877000" />
       <workItem from="1652567017143" duration="57000" />
-      <workItem from="1652611214909" duration="6160000" />
+      <workItem from="1652611214909" duration="15823000" />
     </task>
     <task id="LOCAL-00002" summary="настройка prettie и очистка от ненужных файлов">
       <created>1651749262003</created>
@@ -224,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652559063952</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="пагинация">
+      <created>1652639363292</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652639363292</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +274,9 @@
     <MESSAGE value="страница регистрации" />
     <MESSAGE value="fetch Sign in" />
     <MESSAGE value="готовая авторизация" />
-    <option name="LAST_COMMIT_MESSAGE" value="готовая авторизация" />
+    <MESSAGE value="пагинация" />
+    <MESSAGE value="добавил удаление и изменение" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил удаление и изменение" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

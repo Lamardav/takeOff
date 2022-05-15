@@ -18,7 +18,6 @@ export const baseFetch = async ({ url = "", method = "GET", headers = {}, body }
     if (response.ok) {
       return response.json();
     }
-    console.log(response);
 
     if (!response.ok) {
       switch (response.status) {

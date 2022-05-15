@@ -1,6 +1,14 @@
-import { IContact } from "../IContact";
+export interface IGetContacts {
+  pageSize: number;
+}
 
-export interface IAuthSlice {
-  loading: boolean;
-  contacts: IContact[];
+export interface IDeleteContact {
+  id: number;
+}
+
+export interface IUpdateContact {
+  id: number;
+  name: string;
+  username: string;
+  phone: string;
 }

@@ -1,6 +1,14 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getContactsFetch } from "../../../api/fetches/contacts/contactsFetches";
+import {
+  deleteContactFetch,
+  getAllContactsFetch,
+  getContactsFetch,
+  updateContactFetch,
+} from "../../../api/fetches/contacts/contactsFetches";
 
 export const contactsDispatches = {
   getContacts: createAsyncThunk("getContacts", getContactsFetch),
+  getAllContacts: createAsyncThunk("getAllContacts", getAllContactsFetch),
+  deleteContact: createAsyncThunk("deleteContact", deleteContactFetch),
+  updateContact: createAsyncThunk("updateContact", updateContactFetch),
 };
