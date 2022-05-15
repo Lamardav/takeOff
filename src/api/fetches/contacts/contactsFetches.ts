@@ -1,9 +1,15 @@
 import { baseFetch } from "../../baseFetch";
 
-export const getContactsFetch = async (_ = "", thunkApi: { rejectWithValue: (arg0: unknown) => void }) => {
+interface IGetContacts {
+  pageSize: number;
+}
+export const getContactsFetch = async (
+  params: IGetContacts,
+  thunkApi: { rejectWithValue: (arg0: unknown) => void }
+) => {
   try {
     return await baseFetch({
-      url: "contacts",
+      url: `contacts?_limit=${params.pageSize}`,
       method: "GET",
     });
   } catch (err: unknown) {

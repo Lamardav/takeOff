@@ -8,7 +8,7 @@ export const Footer = () => {
 
 const Content = styled.footer`
   color: ${theme.colors.white};
-  min-height: 5vh;
+  min-height: 20vh;
   background: ${theme.colors.blackLight};
   display: flex;
   justify-content: center;
@@ -16,11 +16,11 @@ const Content = styled.footer`
   font-size: 1vw;
   @media screen and (max-width: ${theme.rubberSize.desktop}) {
     min-height: auto;
-    padding: 4vw 0;
+    padding: 18vw 0;
     font-size: 2vw;
   }
   @media screen and (max-width: ${theme.rubberSize.tablet}) {
-    padding: 7vw 0;
+    padding: 22vw 0;
     font-size: 4vw;
   }
 `;

@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="fetch Sign in">
-      <change afterPath="$PROJECT_DIR$/public/mockImage/header/escape.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/fetches/auth/signUpFetches.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/toast/toast.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/hook/adduserToLocalStorage.ts" afterDir="false" />
+    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="готовая авторизация">
+      <change afterPath="$PROJECT_DIR$/src/api/dto/IPagination.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userCard/userCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/usePaginationHandler/usePaginationHandler.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/dto/IAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/dto/IAuth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/fetches/contacts/contactsFetches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/fetches/contacts/contactsFetches.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignIn/signInForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignIn/signInForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignIn/speakingBender.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignIn/speakingBender.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignUp/signUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignUp/signUpForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/redux/selectors/authSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/selectors/authSelector.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/redux/slice/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/slice/authSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/redux/thunk/authThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/thunk/authThunk.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/routes/appRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/routes/appRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/routes/mainRoutes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/routes/mainRoutes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/auth/initialValue/initialValueAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/auth/initialValue/initialValueAuth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/auth/signIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/signIn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/auth/signUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/signUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contacts/contacts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contacts/contacts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,23 +37,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/dimashpakov/Documents/Projects/takeoff/public/mockImage/header",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/dimashpakov/Documents/Projects/takeoff/node_modules/prettier",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "ts.external.directory.path": "/Users/dimashpakov/Documents/Projects/takeoff/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dimashpakov/Documents/Projects/takeoff/public/mockImage/header&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/dimashpakov/Documents/Projects/takeoff/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/dimashpakov/Documents/Projects/takeoff/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/mockImage/header" />
@@ -133,7 +121,10 @@
       <workItem from="1652275480047" duration="4704000" />
       <workItem from="1652356918430" duration="508000" />
       <workItem from="1652448839803" duration="14205000" />
-      <workItem from="1652522875159" duration="32124000" />
+      <workItem from="1652522875159" duration="32171000" />
+      <workItem from="1652562285881" duration="877000" />
+      <workItem from="1652567017143" duration="57000" />
+      <workItem from="1652611214909" duration="6160000" />
     </task>
     <task id="LOCAL-00002" summary="настройка prettie и очистка от ненужных файлов">
       <created>1651749262003</created>
@@ -226,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652545532902</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="готовая авторизация">
+      <created>1652559063952</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652559063952</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +256,8 @@
     <MESSAGE value="страница входа" />
     <MESSAGE value="страница регистрации" />
     <MESSAGE value="fetch Sign in" />
-    <option name="LAST_COMMIT_MESSAGE" value="fetch Sign in" />
+    <MESSAGE value="готовая авторизация" />
+    <option name="LAST_COMMIT_MESSAGE" value="готовая авторизация" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

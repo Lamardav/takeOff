@@ -1,7 +1,12 @@
 import React from "react";
+import { ContactsList } from "../../componentsPage/pageContacts/contactsList";
 
 const Contacts = () => {
-  return <div>Зарегистрирован</div>;
+  return (
+    <div>
+      <ContactsList />
+    </div>
+  );
 };
 
 export default Contacts;

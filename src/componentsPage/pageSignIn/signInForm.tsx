@@ -1,10 +1,9 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { IFormSignIn } from "../../api/dto/IFormInput";
 import { FormInput } from "../../components/formInput/formInput";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schemaSignIn } from "../../helpers/validation/yup/yup";
-import { Checkbox } from "../../components/checkbox/checkbox";
 import styled from "styled-components";
 import { CustomButton } from "../../components/button/customButton";
 import { theme } from "../../assets/theme/theme";
@@ -17,7 +16,6 @@ import { contactsRoutes } from "../../core/routes/path/listRoutes";
 import { addToLocalStorage } from "../../helpers/hook/adduserToLocalStorage";
 
 export const SignInForm = () => {
-  const [checked, setChecked] = useState<boolean>(false);
   const history = useNavigate();
   const dispatch = useAppDispatch();
   const {
@@ -39,22 +37,14 @@ export const SignInForm = () => {
         }
       });
     },
-    [dispatch, history, checked]
+    [dispatch, history]
   );
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)} autoComplete={"off"}>
       <FormInput<IFormSignIn> control={control} name="email" errors={errors.email} />
       <FormInput<IFormSignIn> control={control} name="password" errors={errors.password} type={"password"} />
-      <Checkbox
-        checked={checked}
-        onChange={() => setChecked(!checked)}
-        label={
-          <>
-            <p>Запомнить меня</p>
-          </>
-        }
-      />
+
       <Button typeButton={"red"} type={"submit"} value={"Войти"} />
       <Register>
         Еще не зарегистрировались? &nbsp;<CustomLink to={authRoutes.signup.link}>Регистрация</CustomLink>&nbsp;
