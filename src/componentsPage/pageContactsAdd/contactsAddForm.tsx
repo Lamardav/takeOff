@@ -12,10 +12,12 @@ import { useAppDispatch } from "../../core/redux/store/store";
 import { ErrToast, UIToastContainer } from "../../components/toast/toast";
 import { IContact } from "../../api/dto/IContact";
 import { contactsDispatches } from "../../core/redux/thunk/contactsThunk";
+import { useTranslation } from "react-i18next";
 
 export const ContactsAddForm = () => {
   const history = useNavigate();
   const dispatch = useAppDispatch();
+  const { t } = useTranslation();
 
   const {
     handleSubmit,
@@ -43,7 +45,7 @@ export const ContactsAddForm = () => {
       <FormInput<IContact> control={control} name="name" errors={errors.name} />
       <FormInput<IContact> control={control} name="username" errors={errors.username} />
       <FormInput<IContact> control={control} name="phone" errors={errors.phone} />
-      <CustomButton typeButton={"red"} type={"submit"} value={"Зарегистрироваться"} withGap />
+      <CustomButton typeButton={"red"} type={"submit"} value={`${t("create")}`} withGap />
       <UIToastContainer />
     </Form>
   );

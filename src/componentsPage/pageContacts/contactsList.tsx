@@ -9,9 +9,11 @@ import { Pagination } from "../../components/pagination/pagination";
 import { batch } from "react-redux";
 import { SearchInput } from "../../components/searchinput";
 import { resetContacts } from "../../core/redux/slice/contactsSlice";
+import { useTranslation } from "react-i18next";
 
 export const ContactsList = () => {
   const dispatch = useAppDispatch();
+  const { t } = useTranslation();
   const contacts = useAppSelector(contactsSelectors.contacts);
   const totalContacts = useAppSelector(contactsSelectors.totalContacts);
   const loading = useAppSelector(contactsSelectors.loading);
@@ -43,7 +45,7 @@ export const ContactsList = () => {
   return (
     <Container>
       <TopMenu>
-        <Title>Список пользователей</Title>
+        <Title>{t("listUsers")}</Title>
         <Label>Найти: </Label>
         <SearchInput pageSize={pageSize} action={contactsDispatches.getContacts} />
       </TopMenu>

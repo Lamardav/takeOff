@@ -3,12 +3,14 @@ import styled from "styled-components";
 import { theme } from "../../assets/theme/theme";
 import { SignInForm } from "../../componentsPage/pageSignIn/signInForm";
 import { SpeakingBender } from "../../componentsPage/pageSignIn/speakingBender";
+import { useTranslation } from "react-i18next";
 
 const SignIn = () => {
+  const { t } = useTranslation();
   return (
     <Content>
       <div>
-        <Title>Войти</Title>
+        <Title>{t("signIn")}</Title>
         <SignInForm />
       </div>
       <SpeakingBender />

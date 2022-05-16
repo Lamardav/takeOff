@@ -3,6 +3,7 @@ import { MultipleFieldErrors, useController, UseControllerProps } from "react-ho
 import styled from "styled-components";
 import { theme } from "../../assets/theme/theme";
 import { Input } from "../input/input";
+import { useTranslation } from "react-i18next";
 
 interface IProps extends Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> {
   errors?: { type?: string; message?: string; types?: MultipleFieldErrors } | undefined;
@@ -15,10 +16,11 @@ export const FormInput = <T,>({
   ...rest
 }: IProps & Pick<UseControllerProps<T>, "control" | "name">) => {
   const { field } = useController({ control, name });
+  const { t } = useTranslation();
 
   return (
     <Content>
-      <Label>{name}</Label>
+      <Label>{t(`${name}`)}</Label>
       <Input
         field={field as Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref">}
         {...rest}

@@ -7,10 +7,13 @@ import { protectedHeaderNav, publicHeaderNav } from "../../core/routes/links";
 import { useAppDispatch, useAppSelector } from "../../core/redux/store/store";
 import { authSelectors } from "../../core/redux/selectors/authSelector";
 import { setAuthFalse } from "../../core/redux/slice/authSlice";
+import { LanguageChanger } from "../languageChanger/languageChanger";
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
   const history = useNavigate();
   const dispatch = useAppDispatch();
+  const { t } = useTranslation();
   const isAuth = useAppSelector(authSelectors.isAuth);
 
   const ExitFunc = useCallback(() => {
@@ -23,10 +26,12 @@ export const Header = () => {
     <Content>
       <Logo onClick={() => history("/")}>
         <Img alt={"Futurama"} src={"/mockImage/header/futur.png"} />
-        <P>Главная</P>
+        <P>{t("main")}</P>
       </Logo>
       <RightArea>
         <NavMenu navList={isAuth ? protectedHeaderNav : publicHeaderNav} />
+        <LanguageChanger />
+
         {isAuth && <Exit onClick={ExitFunc} src={"/mockImage/header/escape.svg"} alt={"exit"} />}
       </RightArea>
     </Content>
@@ -87,4 +92,5 @@ const RightArea = styled.div`
   display: flex;
   align-self: center;
   grid-column-gap: 4vw;
+  align-items: center;
 `;

@@ -14,10 +14,12 @@ import { useNavigate } from "react-router";
 import { authDispatches } from "../../core/redux/thunk/authThunk";
 import { contactsRoutes } from "../../core/routes/path/listRoutes";
 import { addToLocalStorage } from "../../helpers/hook/adduserToLocalStorage";
+import { useTranslation } from "react-i18next";
 
 export const SignInForm = () => {
   const history = useNavigate();
   const dispatch = useAppDispatch();
+  const { t } = useTranslation();
   const {
     handleSubmit,
     control,
@@ -45,9 +47,9 @@ export const SignInForm = () => {
       <FormInput<IFormSignIn> control={control} name="email" errors={errors.email} />
       <FormInput<IFormSignIn> control={control} name="password" errors={errors.password} type={"password"} />
 
-      <Button typeButton={"red"} type={"submit"} value={"Войти"} />
+      <Button typeButton={"red"} type={"submit"} value={t("signIn")} />
       <Register>
-        Еще не зарегистрировались? &nbsp;<CustomLink to={authRoutes.signup.link}>Регистрация</CustomLink>&nbsp;
+        {t("notMemberYet")} &nbsp;<CustomLink to={authRoutes.signup.link}>{t("signUp")}</CustomLink>&nbsp;
       </Register>
     </Form>
   );

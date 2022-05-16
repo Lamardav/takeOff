@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { theme } from "../../assets/theme/theme";
+import { useTranslation } from "react-i18next";
 
 export const SpeakingBender = () => {
-  const [text, setText] = useState<string>("Если войдешь, то уже не выйдешь");
+  const { t } = useTranslation();
+
+  const [text, setText] = useState<string>(t("agressor"));
   const [visible, setVisible] = useState<boolean>(false);
 
   useEffect(() => {
@@ -24,7 +27,7 @@ export const SpeakingBender = () => {
     <Content>
       <Img
         onMouseEnter={() => {
-          setText("Убери руки бедолага");
+          setText(t("agressor2"));
           setVisible(true);
           const timer2 = setTimeout(() => {
             setVisible(false);

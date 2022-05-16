@@ -1,0 +1,26 @@
+import { ru } from "./ru";
+
+export const en: typeof ru = {
+  signIn: "Sign In",
+  notMemberYet: "Not a member yet?",
+  signUp: "Sign Up",
+  name: "Name",
+  username: "Username",
+  phone: "Phone",
+  create: "Create",
+  contacts: "Contacts",
+  contactsAdd: "Add",
+  main: "Main page",
+  email: "Email",
+  password: "Password",
+  test: "Testing task",
+  agressor: "If you go in, you won't go out",
+  agressor2: "Get your hands off the poor guy",
+  passwordConfirmation: "Confirm password",
+  firstName: "Name",
+  confirmRules: "By confirming, you consent to the personal processing of your data",
+  alreadySignedUp: "Already signed up?",
+  signin: "Sign In",
+  signup: "Sign Up",
+  listUsers: "Users list",
+};

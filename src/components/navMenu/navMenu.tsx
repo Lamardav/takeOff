@@ -4,6 +4,7 @@ import { theme } from "../../assets/theme/theme";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { INavBar } from "../../api/dto/INavBar";
+import { useTranslation } from "react-i18next";
 
 interface IProps {
   navList: INavBar[];
@@ -11,12 +12,13 @@ interface IProps {
 
 export const NavMenu = (props: IProps) => {
   const { pathname } = useLocation();
+  const { t } = useTranslation();
 
   return (
     <Nav>
       {props.navList.map((elem, index) => (
         <CustomLink to={elem.link} key={index + index} active={pathname.includes(elem.link)}>
-          {elem.label}
+          {t(`${elem.label}`)}
         </CustomLink>
       ))}
     </Nav>

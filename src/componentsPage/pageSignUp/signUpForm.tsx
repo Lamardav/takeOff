@@ -16,11 +16,13 @@ import { contactsRoutes } from "../../core/routes/path/listRoutes";
 import { useNavigate } from "react-router";
 import { useAppDispatch } from "../../core/redux/store/store";
 import { ErrToast, UIToastContainer } from "../../components/toast/toast";
+import { useTranslation } from "react-i18next";
 
 export const SignUpForm = () => {
   const [checked, setChecked] = useState<boolean>(false);
   const history = useNavigate();
   const dispatch = useAppDispatch();
+  const { t } = useTranslation();
 
   const {
     handleSubmit,
@@ -61,13 +63,13 @@ export const SignUpForm = () => {
         onChange={() => setChecked(!checked)}
         label={
           <>
-            <p>Подтвердив, вы согласитесь на персональную обработку ваших данных</p>
+            <p>{t("confirmRules")}</p>
           </>
         }
       />
-      <CustomButton typeButton={"red"} type={"submit"} value={"Зарегистрироваться"} withGap disabled={!checked} />
+      <CustomButton typeButton={"red"} type={"submit"} value={t("signUp")} withGap disabled={!checked} />
       <Register>
-        Уже зарегистрированы? &nbsp;<CustomLink to={authRoutes.signin.link}>Войти</CustomLink>&nbsp;
+        {t("alreadySignedUp")}? &nbsp;<CustomLink to={authRoutes.signin.link}>{t("signIn")}</CustomLink>&nbsp;
       </Register>
       <UIToastContainer />
     </Form>

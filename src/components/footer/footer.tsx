@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../assets/theme/theme";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
-  return <Content>Тестовое задание</Content>;
+  const { t } = useTranslation();
+  return <Content>{t("test")}</Content>;
 };
 
 const Content = styled.footer`

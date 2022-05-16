@@ -21,6 +21,13 @@
       "firstName": "Lamardav",
       "passwordConfirmation": "dimm1201",
       "id": 4
+    },
+    {
+      "email": "diman95350@gmaail.com",
+      "password": "$2a$10$yXEljGf/6VRZl/x0K0qtY.tbFzdnbfl74egQ5dALAS1OY1F3CwkEa",
+      "firstName": "Lamardd",
+      "passwordConfirmation": "dimm1201",
+      "id": 5
     }
   ],
   "contacts": [
@@ -502,12 +509,6 @@
       "email": "Rey.Padberg@karina.biz",
       "phone": "024-648-3804",
       "id": 24
-    },
-    {
-      "name": "News",
-      "username": "New",
-      "phone": "+37377795450",
-      "id": 25
     }
   ],
   "profile": {
