@@ -1,5 +1,5 @@
 import { baseFetch } from "../../baseFetch";
-import { IDeleteContact, IGetContacts, IUpdateContact } from "../../dto/ISlices/IContactsSlice";
+import { IDeleteContact, IGetAllContacts, IGetContacts, IUpdateContact } from "../../dto/ISlices/IContactsSlice";
 
 export const getContactsFetch = async (
   params: IGetContacts,
@@ -7,7 +7,7 @@ export const getContactsFetch = async (
 ) => {
   try {
     return await baseFetch({
-      url: `contacts?_limit=${params.pageSize}`,
+      url: `contacts?_limit=${params.pageSize}`.concat(params.searchVal && `&name_like=${params.searchVal}`),
       method: "GET",
     });
   } catch (err: unknown) {
@@ -44,10 +44,13 @@ export const updateContactFetch = async (
   }
 };
 
-export const getAllContactsFetch = async (_ = {}, thunkApi: { rejectWithValue: (arg0: unknown) => void }) => {
+export const getAllContactsFetch = async (
+  params: IGetAllContacts,
+  thunkApi: { rejectWithValue: (arg0: unknown) => void }
+) => {
   try {
     return await baseFetch({
-      url: "contacts",
+      url: "contacts".concat(params.searchVal && `?name_like=${params.searchVal}`),
       method: "GET",
     });
   } catch (err: unknown) {

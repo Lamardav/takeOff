@@ -1,5 +1,6 @@
 export interface IGetContacts {
   pageSize: number;
+  searchVal: string;
 }
 
 export interface IDeleteContact {
@@ -11,4 +12,8 @@ export interface IUpdateContact {
   name: string;
   username: string;
   phone: string;
+}
+
+export interface IGetAllContacts {
+  searchVal: string;
 }

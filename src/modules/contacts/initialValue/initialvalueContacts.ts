@@ -1,7 +1,9 @@
-import { IAuthSlice } from "../../../api/dto/ISlices/IAuthSlice";
+import { IContactshSlice } from "../../../api/dto/ISlices/IAuthSlice";
 
-export const initialContacts: IAuthSlice = {
+export const initialContacts: IContactshSlice = {
   loading: false,
   contacts: [],
   totalContacts: 0,
+  pageSize: 5,
+  searchVal: "",
 };

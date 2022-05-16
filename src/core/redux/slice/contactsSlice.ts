@@ -5,7 +5,15 @@ import { contactsDispatches } from "../thunk/contactsThunk";
 const contactsSlice = createSlice({
   name: "contacts",
   initialState: initialContacts,
-  reducers: { resetContacts: () => initialContacts },
+  reducers: {
+    resetContacts: () => initialContacts,
+    setPageSize: (state, action) => {
+      state.pageSize = action.payload;
+    },
+    setSearchVal: (state, action) => {
+      state.searchVal = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(contactsDispatches.getContacts.pending, (state) => {
       state.loading = true;
@@ -50,5 +58,5 @@ const contactsSlice = createSlice({
   },
 });
 
-export const { resetContacts } = contactsSlice.actions;
+export const { resetContacts, setPageSize, setSearchVal } = contactsSlice.actions;
 export const contactsSliceReducer = contactsSlice.reducer;

@@ -7,4 +7,6 @@ export const contactsSelectors = {
   loading: ({ contacts }: RootState) => contacts.loading,
   contacts: createSelector(state, (par) => par.contacts),
   totalContacts: ({ contacts }: RootState) => contacts.totalContacts,
+  pageSize: ({ contacts }: RootState) => contacts.pageSize,
+  searchVal: ({ contacts }: RootState) => contacts.searchVal,
 };

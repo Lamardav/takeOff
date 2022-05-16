@@ -1,19 +1,21 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { theme } from "../../assets/theme/theme";
+import { useAppDispatch } from "../../core/redux/store/store";
+import { setPageSize } from "../../core/redux/slice/contactsSlice";
 
 interface IProps {
   pageSize: number;
   onChangePageSize: (value: number) => void;
   isLoading: boolean;
-  setPageSize: (value: number) => void;
   total: number;
   totalNow: number;
 }
 
-export const Pagination = ({ pageSize, onChangePageSize, isLoading, setPageSize, total, totalNow }: IProps) => {
+export const Pagination = ({ pageSize, onChangePageSize, isLoading, total, totalNow }: IProps) => {
+  const dispatch = useAppDispatch();
   const changePageSize = () => {
-    setPageSize(pageSize + 5);
+    dispatch(setPageSize(pageSize + 5));
     onChangePageSize?.(pageSize + 5);
   };
 
