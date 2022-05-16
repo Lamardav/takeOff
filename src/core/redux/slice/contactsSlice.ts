@@ -55,6 +55,15 @@ const contactsSlice = createSlice({
     builder.addCase(contactsDispatches.updateContact.rejected, (state) => {
       state.loading = false;
     });
+    builder.addCase(contactsDispatches.addContact.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(contactsDispatches.addContact.fulfilled, (state) => {
+      state.loading = false;
+    });
+    builder.addCase(contactsDispatches.addContact.rejected, (state) => {
+      state.loading = false;
+    });
   },
 });
 

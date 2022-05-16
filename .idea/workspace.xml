@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="добавил удаление и изменение">
-      <change afterPath="$PROJECT_DIR$/src/components/searchinput.tsx" afterDir="false" />
+    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="фильтр">
+      <change afterPath="$PROJECT_DIR$/src/componentsPage/pageContactsAdd/contactsAddForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/contacts/contactsAdd.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/dto/ISlices/IAuthSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/dto/ISlices/IAuthSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/dto/ISlices/IContactsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/dto/ISlices/IContactsSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/fetches/contacts/contactsFetches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/fetches/contacts/contactsFetches.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/pagination.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/redux/selectors/contactsSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/selectors/contactsSelector.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/redux/slice/contactsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/slice/contactsSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/contacts/initialValue/initialvalueContacts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/contacts/initialValue/initialvalueContacts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/redux/thunk/contactsThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/redux/thunk/contactsThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/routes/path/listRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/routes/path/listRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/validation/regexp/regexp.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/validation/regexp/regexp.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/validation/yup/yup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/validation/yup/yup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contacts/contacts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contacts/contacts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +129,7 @@
       <workItem from="1652567017143" duration="57000" />
       <workItem from="1652611214909" duration="16641000" />
       <workItem from="1652687376793" duration="5000" />
-      <workItem from="1652720428345" duration="7176000" />
+      <workItem from="1652720428345" duration="8773000" />
     </task>
     <task id="LOCAL-00002" summary="настройка prettie и очистка от ненужных файлов">
       <created>1651749262003</created>
@@ -245,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652649049156</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="фильтр">
+      <created>1652727709331</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1652727709331</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +285,8 @@
     <MESSAGE value="готовая авторизация" />
     <MESSAGE value="пагинация" />
     <MESSAGE value="добавил удаление и изменение" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил удаление и изменение" />
+    <MESSAGE value="фильтр" />
+    <option name="LAST_COMMIT_MESSAGE" value="фильтр" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

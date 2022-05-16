@@ -2,11 +2,7 @@ import React from "react";
 import { ContactsList } from "../../componentsPage/pageContacts/contactsList";
 
 const Contacts = () => {
-  return (
-    <div>
-      <ContactsList />
-    </div>
-  );
+  return <ContactsList />;
 };
 
 export default Contacts;
