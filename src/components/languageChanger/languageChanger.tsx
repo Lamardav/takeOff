@@ -28,6 +28,10 @@ const Content = styled.div`
   grid-template-columns: auto auto;
   grid-column-gap: 0.52vw;
   margin-right: 2vw;
+  @media screen and (max-width: ${theme.rubberSize.desktop}) {
+    grid-column-gap: 1.2vw;
+    margin-right: 2vw;
+  }
 `;
 
 const LanguageItem = styled.div<{ active: boolean }>`
@@ -36,5 +40,11 @@ const LanguageItem = styled.div<{ active: boolean }>`
   cursor: pointer;
   &:first-letter {
     text-transform: capitalize;
+  }
+  @media screen and (max-width: ${theme.rubberSize.desktop}) {
+    font-size: 1.83vw;
+  }
+  @media screen and (max-width: ${theme.rubberSize.tablet}) {
+    font-size: 3.2vw;
   }
 `;

@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="добавил добавление пользователей">
-      <change afterPath="$PROJECT_DIR$/src/components/languageChanger/languageChanger.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/localization/en.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/localization/i18next.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/localization/ru.ts" afterDir="false" />
+    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="добавил локализацию">
+      <change afterPath="$PROJECT_DIR$/public/mockImage/contacts/noData.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/emptyScreens/emptyData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/formInput/formInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formInput/formInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navMenu/navMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navMenu/navMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/languageChanger/languageChanger.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/languageChanger/languageChanger.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/searchinput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchinput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userCard/userCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCard/userCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageContactsAdd/contactsAddForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageContactsAdd/contactsAddForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignIn/signInForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignIn/signInForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignIn/speakingBender.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignIn/speakingBender.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageSignUp/signUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageSignUp/signUpForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/auth/signIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/signIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/localization/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/localization/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/localization/ru.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/localization/ru.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/validation/yup/yup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/validation/yup/yup.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +130,9 @@
       <workItem from="1652567017143" duration="57000" />
       <workItem from="1652611214909" duration="16641000" />
       <workItem from="1652687376793" duration="5000" />
-      <workItem from="1652720428345" duration="13529000" />
+      <workItem from="1652720428345" duration="14159000" />
+      <workItem from="1652771224030" duration="73000" />
+      <workItem from="1652800019321" duration="3839000" />
     </task>
     <task id="LOCAL-00002" summary="настройка prettie и очистка от ненужных файлов">
       <created>1651749262003</created>
@@ -265,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652729277966</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="добавил локализацию">
+      <created>1652735529184</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1652735529184</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +304,8 @@
     <MESSAGE value="добавил удаление и изменение" />
     <MESSAGE value="фильтр" />
     <MESSAGE value="добавил добавление пользователей" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил добавление пользователей" />
+    <MESSAGE value="добавил локализацию" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил локализацию" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

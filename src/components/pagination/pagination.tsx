@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { theme } from "../../assets/theme/theme";
 import { useAppDispatch } from "../../core/redux/store/store";
 import { setPageSize } from "../../core/redux/slice/contactsSlice";
+import { useTranslation } from "react-i18next";
 
 interface IProps {
   pageSize: number;
@@ -13,6 +14,7 @@ interface IProps {
 }
 
 export const Pagination = ({ pageSize, onChangePageSize, isLoading, total, totalNow }: IProps) => {
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const changePageSize = () => {
     dispatch(setPageSize(pageSize + 5));
@@ -22,10 +24,10 @@ export const Pagination = ({ pageSize, onChangePageSize, isLoading, total, total
   return (
     <Container>
       <DescriptionContainer>
-        <TextCount>{`Показано ${totalNow} из ${total}`}</TextCount>
+        {totalNow ? <TextCount>{`${t("shown")} ${totalNow} ${t("from")} ${total}`}</TextCount> : null}
 
         <TextLoading hidden={total <= totalNow} isLoading={isLoading} onClick={changePageSize}>
-          Загрузить еще
+          {t("loadMore")}
         </TextLoading>
       </DescriptionContainer>
     </Container>

@@ -4,6 +4,7 @@ import { IContact } from "../../api/dto/IContact";
 import { theme } from "../../assets/theme/theme";
 import { useAppDispatch } from "../../core/redux/store/store";
 import { contactsDispatches } from "../../core/redux/thunk/contactsThunk";
+import { useTranslation } from "react-i18next";
 
 interface IProps extends IContact {
   onDelete: (id: number) => void;
@@ -12,6 +13,7 @@ interface IProps extends IContact {
 export const UserCard = memo(({ id, name, phone, username, onDelete }: IProps) => {
   const [type, setType] = useState<"read" | "update">("read");
   const dispatch = useAppDispatch();
+  const { t } = useTranslation();
   const [inputName, setInputName] = useState<string | null>(null);
   const [inputUserName, setUserName] = useState<string | null>(null);
   const [inputPhone, setPhone] = useState<string | null>(null);
@@ -31,11 +33,11 @@ export const UserCard = memo(({ id, name, phone, username, onDelete }: IProps) =
     <Content>
       <Id>ID № {id}</Id>
       <Name>
-        Имя :{" "}
+        {t("name")} :{" "}
         <Input value={inputName ?? name} disabled={type === "read"} onChange={(e) => setInputName(e.target.value)} />
       </Name>
       <UserName>
-        Псевдоним:{" "}
+        {t("username")}:{" "}
         <Input
           value={inputUserName ?? username}
           disabled={type === "read"}
@@ -44,7 +46,7 @@ export const UserCard = memo(({ id, name, phone, username, onDelete }: IProps) =
       </UserName>
 
       <Phone>
-        Номер телефона:{" "}
+        {t("phone")}:{" "}
         <Input value={inputPhone ?? phone} disabled={type === "read"} onChange={(e) => setPhone(e.target.value)} />
       </Phone>
       <IconContainer>
@@ -86,25 +88,53 @@ const Content = styled.div`
   grid-row-gap: 1.4vw;
   border: 1px solid ${theme.colors.white};
   padding: 1vw;
+  font-size: 1vw;
+  @media screen and (max-width: ${theme.rubberSize.desktop}) {
+    padding: 2.5vw;
+    grid-row-gap: 2.4vw;
+    font-size: 2.2vw;
+  }
+  @media screen and (max-width: ${theme.rubberSize.tablet}) {
+    grid-template-columns: 1fr;
+    padding: 4.5vw;
+    grid-row-gap: 5.4vw;
+    font-size: 4.2vw;
+  }
 `;
 
 const Id = styled.div``;
 
 const Name = styled.div`
   grid-column: span 2;
+  @media screen and (max-width: ${theme.rubberSize.tablet}) {
+    grid-column: span 1;
+  }
 `;
 
 const UserName = styled.div`
   grid-column: span 2;
+  white-space: nowrap;
+  @media screen and (max-width: ${theme.rubberSize.tablet}) {
+    grid-column: span 1;
+  }
 `;
 
 const Img = styled.img`
   cursor: pointer;
   width: 1vw;
+  @media screen and (max-width: ${theme.rubberSize.desktop}) {
+    width: 2vw;
+  }
+  @media screen and (max-width: ${theme.rubberSize.tablet}) {
+    width: 4vw;
+  }
 `;
 
 const Phone = styled.div`
   grid-column: span 4;
+  @media screen and (max-width: ${theme.rubberSize.tablet}) {
+    grid-column: span 1;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -112,12 +142,18 @@ const IconContainer = styled.div`
   grid-column-gap: 0.4vw;
   justify-self: flex-end;
   align-self: center;
+  @media screen and (max-width: ${theme.rubberSize.tablet}) {
+    grid-column-gap: 1vw;
+  }
+  @media screen and (max-width: ${theme.rubberSize.tablet}) {
+    grid-column-gap: 2vw;
+  }
 `;
 
 const Input = styled.input`
   background: ${theme.colors.blackLight};
   color: ${theme.colors.red};
-
+  font-size: 1vw;
   border: none;
   &:disabled {
     color: ${theme.colors.grayLight};
@@ -125,5 +161,11 @@ const Input = styled.input`
   }
   &:focus {
     outline: none !important;
+  }
+  @media screen and (max-width: ${theme.rubberSize.desktop}) {
+    font-size: 2.2vw;
+  }
+  @media screen and (max-width: ${theme.rubberSize.tablet}) {
+    font-size: 4.2vw;
   }
 `;
