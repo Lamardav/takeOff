@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="добавил локализацию">
+    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="добавил алерты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/emptyScreens/emptyData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/emptyScreens/emptyData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/pagination.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageContactsAdd/contactsAddForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageContactsAdd/contactsAddForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/localization/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/localization/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/localization/ru.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/localization/ru.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contacts/contactsAdd.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contacts/contactsAdd.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +123,8 @@
       <workItem from="1652720428345" duration="14159000" />
       <workItem from="1652771224030" duration="73000" />
       <workItem from="1652800019321" duration="3839000" />
+      <workItem from="1652805957260" duration="4000" />
+      <workItem from="1652806061219" duration="421000" />
     </task>
     <task id="LOCAL-00002" summary="настройка prettie и очистка от ненужных файлов">
       <created>1651749262003</created>
@@ -264,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652735529184</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="добавил алерты">
+      <created>1652805910803</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1652805910803</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +304,8 @@
     <MESSAGE value="фильтр" />
     <MESSAGE value="добавил добавление пользователей" />
     <MESSAGE value="добавил локализацию" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил локализацию" />
+    <MESSAGE value="добавил алерты" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил алерты" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
