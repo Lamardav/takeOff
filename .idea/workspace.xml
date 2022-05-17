@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="добавил локализацию">
-      <change afterPath="$PROJECT_DIR$/public/mockImage/contacts/noData.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/emptyScreens/emptyData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/languageChanger/languageChanger.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/languageChanger/languageChanger.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/emptyScreens/emptyData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/emptyScreens/emptyData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pagination/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/pagination.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/searchinput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchinput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/userCard/userCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCard/userCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageContacts/contactsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componentsPage/pageContactsAdd/contactsAddForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componentsPage/pageContactsAdd/contactsAddForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/localization/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/localization/en.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/localization/ru.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/localization/ru.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/validation/yup/yup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/validation/yup/yup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contacts/contactsAdd.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contacts/contactsAdd.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

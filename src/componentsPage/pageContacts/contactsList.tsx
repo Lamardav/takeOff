@@ -47,6 +47,8 @@ export const ContactsList = () => {
     [dispatch, pageSize, searchVal]
   );
 
+  const changePageSizeHandler = useCallback((value: number) => paginationHandler({ pageSize: value }, null), []);
+
   return (
     <Container>
       <TopMenu>
@@ -73,7 +75,7 @@ export const ContactsList = () => {
       </Content>
       <Pagination
         isLoading={loading}
-        onChangePageSize={(value) => paginationHandler({ pageSize: value }, null)}
+        onChangePageSize={changePageSizeHandler}
         pageSize={pageSize}
         total={totalContacts}
         totalNow={contacts.length}

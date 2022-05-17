@@ -6,7 +6,6 @@ import { schemaContactsAdd } from "../../helpers/validation/yup/yup";
 import { CustomButton } from "../../components/button/customButton";
 import styled from "styled-components";
 import { theme } from "../../assets/theme/theme";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 import { useAppDispatch } from "../../core/redux/store/store";
 import { ErrToast, UIToastContainer } from "../../components/toast/toast";
@@ -33,9 +32,10 @@ export const ContactsAddForm = () => {
       dispatch(contactsDispatches.addContact(data))
         .then((res) => {
           if (res.payload) {
+            ErrToast(t("successAdded"));
           }
         })
-        .catch(() => ErrToast("Ошибка Сервера!"));
+        .catch(() => ErrToast(t("userExists")));
     },
     [dispatch, history]
   );
@@ -64,24 +64,4 @@ const Form = styled.form`
   @media screen and (max-width: ${theme.rubberSize.tablet}) {
     width: 90vw;
   }
-`;
-
-const Register = styled.div`
-  color: ${theme.colors.white};
-  font-size: 0.72vw;
-  text-align: center;
-  margin-top: 1.2vw;
-  @media screen and (max-width: ${theme.rubberSize.desktop}) {
-    font-size: 1.92vw;
-    margin-top: 3.9vw;
-  }
-  @media screen and (max-width: ${theme.rubberSize.tablet}) {
-    font-size: 3.6vw;
-    margin-top: 7vw;
-  }
-`;
-
-const CustomLink = styled(Link)`
-  text-decoration: none;
-  color: ${theme.colors.red};
 `;

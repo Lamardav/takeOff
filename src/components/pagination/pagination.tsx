@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styled, { keyframes } from "styled-components";
 import { theme } from "../../assets/theme/theme";
 import { useAppDispatch } from "../../core/redux/store/store";
@@ -13,7 +13,7 @@ interface IProps {
   totalNow: number;
 }
 
-export const Pagination = ({ pageSize, onChangePageSize, isLoading, total, totalNow }: IProps) => {
+export const Pagination = memo(({ pageSize, onChangePageSize, isLoading, total, totalNow }: IProps) => {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const changePageSize = () => {
@@ -32,7 +32,7 @@ export const Pagination = ({ pageSize, onChangePageSize, isLoading, total, total
       </DescriptionContainer>
     </Container>
   );
-};
+});
 
 const Container = styled.div`
   position: relative;

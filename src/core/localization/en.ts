@@ -36,4 +36,6 @@ export const en: typeof ru = {
   enterName: "Enter name",
   noUsers: "No users",
   noUsersOnRequest: "Nothing found for your request",
+  successAdded: "User succesfully added",
+  userExists: "User with this email exists",
 };

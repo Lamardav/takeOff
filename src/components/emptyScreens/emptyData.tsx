@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import { theme } from "../../assets/theme/theme";
 
@@ -7,7 +7,7 @@ interface Props {
   title: string;
   srcImg: string;
 }
-export const EmptyData = ({ text, title, srcImg }: Props) => {
+export const EmptyData = memo(({ text, title, srcImg }: Props) => {
   return (
     <Content>
       <Title>{title}</Title>
@@ -15,7 +15,7 @@ export const EmptyData = ({ text, title, srcImg }: Props) => {
       <Text>{text}</Text>
     </Content>
   );
-};
+});
 
 const Content = styled.div`
   color: ${theme.colors.white};
