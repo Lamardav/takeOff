@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="readmy update">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="aa678f02-f820-4b32-89a3-75a4978c1db1" name="Changes" comment="readmy update v2">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652805910803</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="readmy update v2">
+      <created>1652885984826</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1652885984826</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +311,8 @@
     <MESSAGE value="добавил добавление пользователей" />
     <MESSAGE value="добавил локализацию" />
     <MESSAGE value="добавил алерты" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил алерты" />
+    <MESSAGE value="readmy update v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="readmy update v2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
