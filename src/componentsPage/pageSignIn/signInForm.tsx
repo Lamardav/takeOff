@@ -15,6 +15,7 @@ import { authDispatches } from "../../core/redux/thunk/authThunk";
 import { contactsRoutes } from "../../core/routes/path/listRoutes";
 import { addToLocalStorage } from "../../helpers/hook/adduserToLocalStorage";
 import { useTranslation } from "react-i18next";
+import { ErrToast } from "../../components/toast/toast";
 
 export const SignInForm = () => {
   const history = useNavigate();
@@ -31,13 +32,15 @@ export const SignInForm = () => {
 
   const onSubmit = useCallback(
     (data: IFormSignIn) => {
-      dispatch(authDispatches.logIn(data)).then((res) => {
-        if (res.payload) {
-          addToLocalStorage<IFormSignIn>(data);
-          history(contactsRoutes.contacts.link);
-        } else {
-        }
-      });
+      dispatch(authDispatches.logIn(data))
+        .then((res) => {
+          if (res.payload) {
+            addToLocalStorage<IFormSignIn>(data);
+            history(contactsRoutes.contacts.link);
+          } else {
+          }
+        })
+        .catch(() => ErrToast("Неверные данные"));
     },
     [dispatch, history]
   );
